@@ -1,0 +1,57 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/App/AppGet",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 10000
+        }
+      ],
+      "UpstreamPathTemplate": "/App1",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/App/AppGet",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 20000
+        }
+      ],
+      "UpstreamPathTemplate": "/App2",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "Description": "UpstreamPathTemplate Gelen Adres, DownstreamPathTemplate Yönlendirilen Adres",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "UpstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 20000
+        }
+      ]
+    }
+    //{
+    //  "DownstreamPathTemplate": "/weatherforecast1", Gideceði adres
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5003
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/weatherforecast1", Gelen Adres
+    //  "UpstreamHttpMethod": [ "Get" ]
+    //},
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:30000"
+  }
+}
