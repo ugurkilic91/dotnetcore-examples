@@ -35,5 +35,14 @@ namespace WebApiSwagger.Controllers
             })
             .ToArray();
         }
+        /// <summary>
+        /// Get Metodu Açıklama
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public string Post()
+        {
+            return "Ok";
+        }
     }
 }
